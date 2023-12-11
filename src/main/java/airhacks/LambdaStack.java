@@ -113,7 +113,7 @@ public class LambdaStack extends Stack {
 
     Function createFunction(String functionJar,String functionName,String functionHandler, Map<String,String> configuration, int memory, int timeout) {
         return Function.Builder.create(this, functionName)
-                .runtime(Runtime.JAVA_17)
+                .runtime(Runtime.JAVA_21)
                 .architecture(Architecture.ARM_64)
                 .code(Code.fromAsset(functionJar))
                 .handler(functionHandler)
